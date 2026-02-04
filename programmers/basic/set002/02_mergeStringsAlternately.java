@@ -1,13 +1,11 @@
 class Solution {
     public String solution(String str1, String str2) {
-        String answer = "";
-        int len = str1.length();
+	int len = str1.length();
+        StringBuilder sb = new StringBuilder();
         
-        for(int i = 0; i < len; i++ ) {
-            answer += (Character.toString(str1.charAt(i))+
-                       Character.toString(str2.charAt(i)));
-        };
+        for(int i = 0; i < len; i++) {
+            sb.append(str1.charAt(i)).append(str2.charAt(i));
+        }
         
-        return answer;
-    }
+        return sb.toString();
 }
